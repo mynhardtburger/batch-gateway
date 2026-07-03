@@ -95,7 +95,7 @@ func newClient() *openai.Client {
 func newClientForTenant(tenant string) *openai.Client {
 	c := openai.NewClient(
 		option.WithBaseURL(testApiserverURL+"/v1/"),
-		option.WithAPIKey("unused"),
+		option.WithAPIKey(testAPIKey),
 		option.WithHeader(testTenantHeader, tenant),
 		option.WithHTTPClient(testHTTPClient),
 	)
